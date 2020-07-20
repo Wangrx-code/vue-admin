@@ -4,7 +4,14 @@ module.exports = {
     outputDir:process.env.NODE_ENV === 'production'? 'dist': 'devdist',
     lintOnSave:false,
     chainWebpack:(config)=>{},
-    configureWebpack:(config)=>{},
+    configureWebpack:(config)=>{
+        config.resolve={
+            extensions:['.js','.json','.vue'],
+            alias:{
+                '@':path.resolve(__dirname,'./src')
+            }
+        }
+    },
     productionSourceMap:false,
     css:{
         extract:true,
