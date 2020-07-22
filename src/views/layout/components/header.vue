@@ -1,0 +1,20 @@
+<template>
+  <div id="header-wrap">头部</div>
+</template>
+<script>
+export default {
+  name: "Header"
+};
+</script>
+<style lang="scss" scoped>
+@import "../../../styles/config.scss";
+#header-wrap {
+  position: fixed;
+  top: 0%;
+  left: $navWidth;
+  width: 100%;
+  height: 68px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.1);
+}
+</style>
